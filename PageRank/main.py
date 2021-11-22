@@ -8,9 +8,9 @@ n = 500 #for our crawler matrix
 
 # importing the text file and turning it into a matrix of float data type
 # m = np.loadtxt("testing.txt", dtype=float)
-m = np.loadtxt("CPP_Matrix.txt", dtype=float)
+# m = np.loadtxt("CPP_Matrix.txt", dtype=float)
 # since we will have two matrix from each web crawl
-# m2=np.loadtxt("matrix2.txt", dtype=float)
+m = np.loadtxt("NPR_Matrix.txt", dtype=float)
 
 # multiples m by the matrix and calculates the rank using random surfer model
 def calcRank(matrix):
@@ -54,7 +54,8 @@ while str(prev_matrix) != str(new_matrix):
 print("sum: " + str(rankSum(new_matrix)))
 
 # put the resulting page ranks in a text file
-openFile = open('CPP_Results', "w")
+# openFile = open('CPP_Results', "w")
+openFile = open('NPR_Results', "w")
 for row in new_matrix:
     for num in row:
         openFile.write(str(num) + "\n")
